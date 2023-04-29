@@ -6,4 +6,9 @@
     width: 1em;
     min-height: 1.5em;
     text-align: center;
+    cursor: pointer;
+}
+
+.root:focus {
+    background-color: #CFCFCF;
 }

@@ -7,7 +7,7 @@
     font-size: 6em;
     font-weight: bold;
     letter-spacing: 0.6em;
-    margin-right: -0.6em;
+    margin-right: -0.3em;
     margin-left: 1.6em;
     text-align: right;
 }
@@ -30,4 +30,11 @@
     left: 0.2em;
     font-size: 6em;
     font-weight: bold;
+}
+
+.numberInputs {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1em;
+    margin: 2em 0;
 }
