@@ -7,7 +7,18 @@ export default function AdditionPage() {
 
     function updateDigit(position: number, value: number) {
         digits[position] = value;
-        console.log(parseInt(digits.join(''), 10));
+        // console.log(parseInt(digits.join(''), 10));
+    }
+
+    function handleKeyPressOnInputContainer(e: any) {
+        e.preventDefault();
+
+        if (e.key === "ArrowLeft") {
+            console.log("Left key pressed.");
+        }
+        if (e.key === "ArrowRight") {
+            console.log("Right key pressed.");
+        }
     }
 
     return (
@@ -31,7 +42,7 @@ export default function AdditionPage() {
 
                 <div className={styles.divider}></div>
 
-                <div className={styles.numberInputs}>
+                <div className={styles.numberInputs} tabIndex={0} onKeyUp={handleKeyPressOnInputContainer}>
                     <NumberInput onChange={(value) => updateDigit(5, value || 0)} />
                     <NumberInput onChange={(value) => updateDigit(4, value || 0)} />
                     <NumberInput onChange={(value) => updateDigit(3, value || 0)} />
