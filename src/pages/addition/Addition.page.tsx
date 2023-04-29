@@ -10,17 +10,6 @@ export default function AdditionPage() {
         // console.log(parseInt(digits.join(''), 10));
     }
 
-    function handleKeyPressOnInputContainer(e: any) {
-        e.preventDefault();
-
-        if (e.key === "ArrowLeft") {
-            console.log("Left key pressed.");
-        }
-        if (e.key === "ArrowRight") {
-            console.log("Right key pressed.");
-        }
-    }
-
     return (
         <div className={styles.root}>
             <h1>Írásbeli összeadás gyakorlása</h1>
@@ -42,7 +31,7 @@ export default function AdditionPage() {
 
                 <div className={styles.divider}></div>
 
-                <div className={styles.numberInputs} tabIndex={0} onKeyUp={handleKeyPressOnInputContainer}>
+                <div className={styles.numberInputs} tabIndex={0}>
                     <NumberInput onChange={(value) => updateDigit(5, value || 0)} />
                     <NumberInput onChange={(value) => updateDigit(4, value || 0)} />
                     <NumberInput onChange={(value) => updateDigit(3, value || 0)} />

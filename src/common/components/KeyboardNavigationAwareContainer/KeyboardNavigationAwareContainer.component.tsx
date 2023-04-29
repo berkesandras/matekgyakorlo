@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from "react";
 
 export default function KeyboardNavigationAwareContainer({
     children,
@@ -6,7 +6,7 @@ export default function KeyboardNavigationAwareContainer({
 
     return (
         <div>
-            {children}
+            {React.Children.map(children, c => c)}
         </div>
     );
 }
