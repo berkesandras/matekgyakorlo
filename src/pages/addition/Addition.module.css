@@ -1,0 +1,33 @@
+.root {
+    display: flex;
+    flex-direction: column;
+}
+
+.numbers {
+    font-size: 6em;
+    font-weight: bold;
+    letter-spacing: 0.6em;
+    margin-right: -0.6em;
+    margin-left: 1.6em;
+    text-align: right;
+}
+
+.divider {
+    position: relative;
+    height: 6px;
+    width: 100%;
+    background-color: #213547;
+    margin-top: 2em;
+}
+
+.operationArea {
+    position: relative;
+}
+
+.plusSign {
+    position: absolute;
+    bottom: 0.4sem;
+    left: 0.2em;
+    font-size: 6em;
+    font-weight: bold;
+}
