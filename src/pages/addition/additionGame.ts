@@ -34,14 +34,14 @@ export class AdditionGame {
     public currentQuiz?: AdditionQuiz;
     
     constructor(
-        private rounds: number = 10,
+        private rounds: number = 0,
     ) {
         this.currentQuiz = new AdditionQuiz();
     }
 
     nextRound() {
         this.completedRounds++;
-        if (this.completedRounds < this.rounds) {
+        if (this.rounds === 0 || this.completedRounds < this.rounds) {
             this.currentQuiz = new AdditionQuiz();
             return true;
         }

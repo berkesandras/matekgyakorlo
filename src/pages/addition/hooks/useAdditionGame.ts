@@ -6,15 +6,13 @@ export default function useAdditionGame() {
     let game: AdditionGame;
 
     const [ addends, setAddends ] = useState<number[]>();
-    const [ rounds, setRounds ] = useState<number>();
     const [ completedRounds, setCompletedRounds ] = useState<number>();
     const [ correctAnswers, setCorrectAnswers ] = useState<number>();
     const [ isGameOver, setGameOver ] = useState(false);
 
     useEffect(() => {
-        game = new AdditionGame(10);
+        game = new AdditionGame();
         setAddends(game.currentQuiz?.addends);
-        setRounds(10);
         setCompletedRounds(0);
         setCorrectAnswers(0);
     }, []);
@@ -39,7 +37,6 @@ export default function useAdditionGame() {
 
     return {
         addends,
-        rounds,
         completedRounds,
         correctAnswers,
         isGameOver,
