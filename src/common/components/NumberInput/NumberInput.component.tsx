@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import styles from "./NumberInput.module.css";
 
 interface Props {
@@ -11,36 +10,30 @@ export default function NumberInput({
     onChange,
 }: Props): JSX.Element {
 
-    const [ valueInternal, setValueInternal ] = useState<number>();
-
-    useEffect(() => {
-        setValueInternal(value);
-    }, []);
-
-    useEffect(() => {
-        onChange && onChange(valueInternal);
-    }, [ valueInternal ]);
+    function notifyChange(value: number | undefined) {
+        onChange && onChange(value);
+    }
 
     function onKeyUp(e: any) {
-        const currentValue = valueInternal || 0;
+        const currentValue = value || 0;
 
         if (e.key === "Delete") {
-            setValueInternal(undefined);
+            notifyChange(undefined);
         } else if (e.key === "ArrowUp" && currentValue < 9) {
-            setValueInternal(currentValue + 1);
+            notifyChange(currentValue + 1);
         } else if (e.key === "ArrowDown" && currentValue > 0) {
-            setValueInternal(currentValue - 1);
+            notifyChange(currentValue - 1);
         } else {
             const numericValue = parseInt(e.key, 10);
             if (!isNaN(numericValue)) {
-                setValueInternal(numericValue);
+                notifyChange(numericValue);
             }
         }
     }
 
     return (
         <div className={styles.root} onKeyUp={onKeyUp} tabIndex={0}>
-            {valueInternal}
+            {value}
         </div>
     );
 }
