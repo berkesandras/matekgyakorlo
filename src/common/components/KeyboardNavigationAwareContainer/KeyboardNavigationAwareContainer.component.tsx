@@ -1,21 +1,32 @@
 import { HTMLAttributes, useRef } from "react";
 
+interface Props extends HTMLAttributes<HTMLDivElement> {
+    forwardKey?: string;
+    backwardKey?: string;
+}
+
 export default function KeyboardNavigationAwareContainer({
     children,
+    onKeyDown,
+    forwardKey,
+    backwardKey,
     ...rest
-}: HTMLAttributes<HTMLDivElement>) {
+}: Props) {
 
     const containerRef = useRef(null);
 
-    function handleKeyUp(e: any) {
+    function handleKeyDown(e: any) {
 
         let delta = 0;
 
-        if (e.key === "ArrowLeft") {
+        if (e.key === (backwardKey || "ArrowLeft")) {
             delta = -1;
-        } else if (e.key === "ArrowRight") {
+        } else if (e.key === (forwardKey || "ArrowRight")) {
             delta = 1;
         } else {
+            if (onKeyDown) {
+                onKeyDown(e);
+            }
             return;
         }
 
@@ -35,10 +46,17 @@ export default function KeyboardNavigationAwareContainer({
         }
 
         (children[nextActiveElemIndex] as HTMLElement).focus();
+
+        if (onKeyDown) {
+            onKeyDown(e);
+        }
+
+        e.stopPropagation();
+        e.preventDefault();
     }
 
     return (
-        <div ref={containerRef} onKeyUp={handleKeyUp} {...rest}>
+        <div ref={containerRef} onKeyDown={handleKeyDown} {...rest}>
             {children}
         </div>
     );
