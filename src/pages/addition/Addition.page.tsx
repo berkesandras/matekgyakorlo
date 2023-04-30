@@ -1,3 +1,4 @@
+import KeyboardNavigationAwareContainer from "../../common/components/KeyboardNavigationAwareContainer/KeyboardNavigationAwareContainer.component";
 import NumberInput from "../../common/components/NumberInput/NumberInput.component";
 import styles from "./Addition.module.css";
 
@@ -31,14 +32,14 @@ export default function AdditionPage() {
 
                 <div className={styles.divider}></div>
 
-                <div className={styles.numberInputs} tabIndex={0}>
+                <KeyboardNavigationAwareContainer className={styles.numberInputs} >
                     <NumberInput onChange={(value) => updateDigit(5, value || 0)} />
                     <NumberInput onChange={(value) => updateDigit(4, value || 0)} />
                     <NumberInput onChange={(value) => updateDigit(3, value || 0)} />
                     <NumberInput onChange={(value) => updateDigit(2, value || 0)} />
                     <NumberInput onChange={(value) => updateDigit(1, value || 0)} />
                     <NumberInput onChange={(value) => updateDigit(0, value || 0)} />
-                </div>
+                </KeyboardNavigationAwareContainer>
             </div>
         </div>
     );

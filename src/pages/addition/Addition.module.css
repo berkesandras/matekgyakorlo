@@ -34,7 +34,7 @@
 
 .numberInputs {
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: flex-end;
     gap: 1em;
     margin: 2em 0;
 }
