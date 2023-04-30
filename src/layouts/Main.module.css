@@ -1,6 +1,10 @@
 .root {
-    width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
+    place-items: center;
+    justify-content: center;
     flex-direction: column;
+    background-image: url(/public/background.jpg);
+    background-size: 100% 100%;
 }

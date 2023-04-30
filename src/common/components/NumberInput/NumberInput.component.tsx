@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import styles from "./NumberInput.module.css";
 
 interface Props {
@@ -5,10 +6,10 @@ interface Props {
     onChange?(value: number | undefined): any;
 }
 
-export default function NumberInput({
+export default forwardRef<HTMLDivElement, Props>(function NumberInput({
     value,
     onChange,
-}: Props): JSX.Element {
+}: Props, ref): JSX.Element {
 
     function notifyChange(value: number | undefined) {
         onChange && onChange(value);
@@ -32,8 +33,8 @@ export default function NumberInput({
     }
 
     return (
-        <div className={styles.root} onKeyUp={onKeyUp} tabIndex={0}>
-            {value}
+        <div ref={ref} className={styles.root} onKeyUp={onKeyUp} tabIndex={0}>
+            <span>{value}</span>
         </div>
     );
-}
+});

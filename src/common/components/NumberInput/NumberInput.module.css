@@ -1,14 +1,15 @@
 .root {
     font-size: 6em;
     font-weight: bold;
-    border: 1px solid #333333;
+    border: 2px solid #CFCFCF;
     border-radius: 5px;
     width: 1em;
     min-height: 1.5em;
     text-align: center;
     cursor: pointer;
+    outline: none;
 }
 
 .root:focus {
-    background-color: #E3E3E3;
+    border: 2px solid #787878;
 }

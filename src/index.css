@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Fredoka", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -25,14 +27,12 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 100vw;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 2em;
   line-height: 1.1;
 }
 

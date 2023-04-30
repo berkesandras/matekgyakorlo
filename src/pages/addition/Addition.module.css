@@ -1,6 +1,11 @@
 .root {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 3em;
+    border-radius: 3em;
 }
 
 .numbers {
@@ -22,6 +27,7 @@
 
 .operationArea {
     position: relative;
+    margin-top: 2em;
 }
 
 .plusSign {
@@ -35,6 +41,11 @@
 .numberInputs {
     display: flex;
     justify-content: flex-end;
-    gap: 1em;
+    gap: 0.6em;
     margin: 2em 0;
+}
+
+.score {
+    font-weight: bold;
+    font-size: 1.5em;
 }
