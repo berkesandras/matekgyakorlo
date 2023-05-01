@@ -1,6 +1,7 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import MainLayout from "./layouts/Main.layout";
 import AdditionPage from "./pages/addition/Addition.page";
+import SubstractionGame from "./pages/substraction/Substraction.page";
 
 export default createBrowserRouter([
     {
@@ -16,6 +17,10 @@ export default createBrowserRouter([
             {
                 path: "osszeadas",
                 element: <AdditionPage />,
+            },
+            {
+                path: "kivonas",
+                element: <SubstractionGame />,
             },
         ],
     },

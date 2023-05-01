@@ -22,8 +22,12 @@ export default forwardRef<HTMLDivElement, Props>(function NumberInput({
             notifyChange(undefined);
         } else if (e.key === "ArrowUp" && currentValue < 9) {
             notifyChange(currentValue + 1);
-        } else if (e.key === "ArrowDown" && currentValue > 0) {
-            notifyChange(currentValue - 1);
+        } else if (e.key === "ArrowDown") {
+            if (value === undefined) {
+                notifyChange(0);
+            } else if (currentValue > 0) {
+                notifyChange(currentValue - 1);
+            }
         } else {
             const numericValue = parseInt(e.key, 10);
             if (!isNaN(numericValue)) {

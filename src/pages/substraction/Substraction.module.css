@@ -1,0 +1,81 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 3em;
+    border-radius: 3em;
+}
+
+.numbers {
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 0.6em;
+    margin-right: -0.3em;
+    margin-left: 1.6em;
+    text-align: right;
+}
+
+.divider {
+    position: relative;
+    height: 6px;
+    width: 100%;
+    background-color: #213547;
+    margin-top: 2em;
+}
+
+.operationArea {
+    position: relative;
+    margin-top: 2em;
+}
+
+.plusSign {
+    position: absolute;
+    bottom: 3.7em;
+    left: 0.2em;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.numberInputs {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.3em;
+    margin: 2em 0;
+}
+
+.score {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+@media (min-width:480px) {
+    .numbers {
+        font-size: 4em;
+    }
+
+    .plusSign {
+        bottom: 3.2em;
+        font-size: 4em;
+    }
+
+    .numberInputs {
+        gap: 0.45em;
+    }
+}
+
+@media (min-width:961px) {
+    .numbers {
+        font-size: 6em;
+    }
+
+    .plusSign {
+        bottom: 2.6em;
+        font-size: 6em;
+    }
+
+    .numberInputs {
+        gap: 0.6em;
+    }
+}
