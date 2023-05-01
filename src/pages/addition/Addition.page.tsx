@@ -64,7 +64,6 @@ export default function AdditionPage() {
                 <div className={styles.divider}></div>
 
                 <KeyboardNavigationAwareContainer className={styles.numberInputs} onKeyDown={checkAnswerOnEnter}>
-                    <NumberInput value={digits[0]} onChange={(value) => updateDigit(0, value || 0)} />
                     <NumberInput value={digits[1]} onChange={(value) => updateDigit(1, value || 0)} />
                     <NumberInput value={digits[2]} onChange={(value) => updateDigit(2, value || 0)} />
                     <NumberInput value={digits[3]} onChange={(value) => updateDigit(3, value || 0)} />
