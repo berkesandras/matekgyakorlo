@@ -33,7 +33,7 @@ export default forwardRef<HTMLDivElement, Props>(function NumberInput({
     }
 
     return (
-        <div ref={ref} className={styles.root} onKeyUp={onKeyUp} tabIndex={0}>
+        <div ref={ref} role="textbox" className={styles.root} onKeyUp={onKeyUp} tabIndex={0}>
             <span>{value}</span>
         </div>
     );
