@@ -1,0 +1,8 @@
+server {
+    listen 80;
+    listen [::]:80;
+    root /www/data;
+
+    server_name matekgyakorlo.hu www.matekgyakorlo.hu;
+    server_tokens off;
+}
