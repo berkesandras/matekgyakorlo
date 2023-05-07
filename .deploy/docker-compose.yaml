@@ -9,4 +9,4 @@ services:
     restart: always
     volumes:
       - ./nginx/conf/:/etc/nginx/conf.d/:ro
-      - ../dist/:/www/data/:ro
+      - ../dist/:/var/www/data/:ro
