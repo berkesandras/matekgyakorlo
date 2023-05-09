@@ -50,6 +50,22 @@ export default function AdditionPage() {
                 Add össze a számokat úgy, mintha papíron számolnál. Jobbról balra haladj!
             </div>
 
+            <div className={styles.instructions}>
+                <h2>Irányítás:</h2>
+                <div>
+                    <span className={styles.instructionsSymbol}>↑ ↓</span>: szám növelése/csökkentése
+                </div>
+                <div>
+                    <span className={styles.instructionsText}>0-9</span>: szám beírása
+                </div>
+                <div>
+                    <span className={styles.instructionsSymbol}>← →</span>: helyiérték léptetése
+                </div>
+                <div>
+                    <span className={styles.instructionsText}>Enter</span>: eredmény ellenőrzése
+                </div>
+            </div>
+
             <div className={styles.operationArea}>
                 <div className={styles.numbers}>
                     <span>{addends && addends[0]}</span>
