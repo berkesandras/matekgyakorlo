@@ -12,7 +12,8 @@ export default createBrowserRouter([
         ),
         children: [
             {
-                element: <Navigate to="main" />,
+                path: "",
+                element: <Navigate to="/main" />,
                 index: true,
             },
             {

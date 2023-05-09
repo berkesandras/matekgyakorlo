@@ -1,3 +1,28 @@
+.root { 
+    display: flex;
+    gap: 2em;
+}
+
+.root a, .root a:hover {
+    color: #213547;
+}
+
 .item {
-    
+    background: rgba(255, 255, 255, 1);
+    border-radius: 3em;
+    padding: 3em;
+    width: 18em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    transition: transform .2s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.itemIcon {
+    font-size: 12em;
 }
