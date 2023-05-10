@@ -24,7 +24,8 @@ export class SubstractionQuiz {
         for (let i = 0; i < numberOfNumbers; i++) {
             this.numbers.push(Math.floor(Math.random() * maximumValue) + minimumValue + 1);
         }
-        this.numbers.sort().reverse();
+
+        this.numbers = this.numbers.sort((a, b) => b - a);
     }
 }
 

@@ -3,6 +3,7 @@ import KeyboardNavigationAwareContainer from "../../common/components/KeyboardNa
 import NumberInput from "../../common/components/NumberInput/NumberInput.component";
 import styles from "./Substraction.module.css";
 import useSubstractionGame from "./hooks/useSubstractionGame";
+import NavigationInstruction from "../addition/components/NavigationInstruction/NavigationInstruction";
 
 export default function SubstractionGame() {
 
@@ -48,6 +49,10 @@ export default function SubstractionGame() {
 
             <div>
                 Vond ki egymásból a számokat úgy, mintha papíron számolnál. Jobbról balra haladj!
+            </div>
+
+            <div className={styles.instructions}>
+                <NavigationInstruction />
             </div>
 
             <div className={styles.operationArea}>

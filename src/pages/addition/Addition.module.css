@@ -56,15 +56,6 @@
     top: 0;
 }
 
-.instructionsSymbol {
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-.instructionsText {
-    font-size: 1.2em;
-}
-
 @media (min-width:480px) {
     .numbers {
         font-size: 4em;
