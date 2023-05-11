@@ -52,6 +52,7 @@
 
 .instructions {
     position: absolute;
+    visibility: hidden;
     left: 3em;
     top: 0;
 }
@@ -83,5 +84,9 @@
 
     .numberInputs {
         gap: 0.6em;
+    }
+
+    .instructions {
+        visibility: visible;
     }
 }

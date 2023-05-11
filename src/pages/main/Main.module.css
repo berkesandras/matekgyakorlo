@@ -1,6 +1,7 @@
 .root { 
     display: flex;
-    gap: 2em;
+    flex-direction: column;
+    gap: 1.5em;
 }
 
 .root a, .root a:hover {
@@ -10,13 +11,20 @@
 .item {
     background: rgba(255, 255, 255, 1);
     border-radius: 3em;
-    padding: 3em;
-    width: 18em;
+    padding: 4em;
+    width: 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     place-items: center;
     transition: transform .2s;
+    text-align: center;
+}
+
+.item h1 {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
 }
 
 .item:hover {
@@ -24,5 +32,26 @@
 }
 
 .itemIcon {
-    font-size: 12em;
+    font-size: 3em;
+}
+
+@media (min-width:961px) {
+    .root {
+        flex-direction: row;
+        gap: 3em;
+    }
+
+    .item {
+        width: 18em;
+    }
+
+    .item h1 {
+        font-size: 2em;
+        margin: inherit;
+        padding: inherit;
+    }
+
+    .itemIcon {
+        font-size: 12em;
+    }
 }
